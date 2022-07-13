@@ -16,7 +16,7 @@ DEVICE_PATH := device/oneplus/oneplus9
 #BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 #BOARD_KERNEL_CMDLINE += \
 #    androidboot.selinux=permissive
-
+TARGET_USES_AOSP_FOR_AUDIO := false
 include build/make/target/board/BoardConfigMainlineCommon.mk
 
 # A/B
@@ -75,6 +75,9 @@ TARGET_2ND_ARCH_VARIANT := armv8-2a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
+
+# Audio
+AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
 
 # Biometrics
 TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
