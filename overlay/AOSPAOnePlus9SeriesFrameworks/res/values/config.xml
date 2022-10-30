@@ -68,4 +68,7 @@
     <!-- Whether device has an alert slider. -->
     <bool name="config_hasAlertSlider">true</bool>
 
+    <!-- Whether device supports increased touch sensitvity -->
+    <bool name="config_supportGloveMode">true</bool>
+
 </resources>
