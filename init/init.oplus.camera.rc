@@ -22,3 +22,6 @@ service vendor.camera-provider-2-4 /vendor/bin/hw/android.hardware.camera.provid
     ioprio rt 4
     capabilities SYS_NICE
     writepid /dev/cpuset/camera-daemon/tasks /dev/stune/foreground/tasks
+
+    # OIS
+    chown cameraserver cameraserver /sys/kernel/ois_control/dump_registers
