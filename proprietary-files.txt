@@ -431,6 +431,21 @@ vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
+vendor/lib/camera.device@3.2-impl.so
+vendor/lib/camera.device@3.3-impl.so
+vendor/lib/camera.device@3.4-external-impl.so
+vendor/lib/camera.device@3.4-impl.so
+vendor/lib/camera.device@3.5-external-impl.so
+vendor/lib/camera.device@3.5-impl.so
+vendor/lib/camera.device@3.6-external-impl.so
+vendor/lib/libcamxexternalformatutils.so
+vendor/lib64/camera.device@3.2-impl.so
+vendor/lib64/camera.device@3.3-impl.so
+vendor/lib64/camera.device@3.4-external-impl.so
+vendor/lib64/camera.device@3.4-impl.so
+vendor/lib64/camera.device@3.5-external-impl.so
+vendor/lib64/camera.device@3.5-impl.so
+vendor/lib64/camera.device@3.6-external-impl.so
 
 # Camera - OOS
 odm/etc/camera/ancsegbase/anc_cl_kernel.cache|6d84034beebc1b9f210e6885ff8114c0a1a8ee0e
