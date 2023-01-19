@@ -735,6 +735,8 @@ odm/etc/camera/anc_cl_kernel.cache|7c483eedb83b50476042d1e78229ec5f355a8312
 odm/etc/camera/anc_cl_kernel_ins.cache|b96972f3ef98be6479a7433eef4e0fbda627baad
 odm/etc/camera/calibrationOutput_uw.bin|a5bdcc7266d4b2f6eb995cd691576123f765dfbb
 odm/etc/camera/calibrationOutput_uw_686.bin|0132d59e77f2ecce9cd6e32bcf6602a1d8b4d4d9
+odm/etc/vintf/manifest/manifest_oplus_cameraextension.xml
+vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc
 odm/etc/camera/distortion_result.bin|0abe69c6ecacdc5138d1a6eea0716b3cc0d5f22f
 odm/etc/camera/eis_camera.vcfg|dfc26a8f6e69b234eb5b8ce1bfb9d37c306125f7
 odm/etc/camera/engineer_camera_config|4cc292cc65a9d814005a5f7c1cc31b55b4403bc4
