@@ -866,6 +866,7 @@ odm/etc/camera/anc_cl_kernel.cache|7c483eedb83b50476042d1e78229ec5f355a8312
 odm/etc/camera/anc_cl_kernel_ins.cache|b96972f3ef98be6479a7433eef4e0fbda627baad
 odm/etc/camera/calibrationOutput_uw.bin|a5bdcc7266d4b2f6eb995cd691576123f765dfbb
 odm/etc/camera/calibrationOutput_uw_686.bin|0132d59e77f2ecce9cd6e32bcf6602a1d8b4d4d9
+odm/etc/vintf/manifest/manifest_oplus_cameraextension.xml
 odm/etc/camera/distortion_result.bin|0abe69c6ecacdc5138d1a6eea0716b3cc0d5f22f
 odm/etc/camera/eis_camera.vcfg|dfc26a8f6e69b234eb5b8ce1bfb9d37c306125f7
 odm/etc/camera/engineer_camera_config|4cc292cc65a9d814005a5f7c1cc31b55b4403bc4
@@ -1015,6 +1016,7 @@ odm/lib64/vendor.oplus.hardware.cammidasservice@1.0.so|f9846285ba063461d1539a44e
 odm/lib64/vendor.oplus.hardware.orms@1.0.so|faff993f8153eaf55223f49e5e2ad378f4e96013
 odm/lib64/vendor.oplus.hardware.osense.client@1.0.so|ef23670ea9959bfcd159fee682a0aaa9418b6761
 vendor/etc/camera/M_FaceAttribute_RGB_age_gender_1.7.1.model.hardcode|5e1acd6e3dc59c74bd397a2d86f01c0bde1d3e4e
+vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc
 vendor/firmware/CAMERA_ICP.elf|d5e1a5d65150a40e8c9a40a51cb1592d302f4b5a
 vendor/firmware/tof8801_firmware.bin|d31c400790c7ee547ffa2ae5aa6c79988437399e
 vendor/lib64/camera/components/com.qti.camx.chiiqutils.so|907fe997deefc0e1a06594acea7854fff8cae88a
