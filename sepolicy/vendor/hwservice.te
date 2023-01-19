@@ -5,5 +5,8 @@ type vendor_hal_midas_hwservice, hwservice_manager_type, protected_hwservice;
 # CWB
 type hal_cwb_hwservice, hwservice_manager_type, protected_hwservice;
 
+# Diag
+type hal_diag_hwservice, hwservice_manager_type, protected_hwservice;
+
 # ORMS
 type vendor_hal_orms_hwservice, hwservice_manager_type, protected_hwservice;
