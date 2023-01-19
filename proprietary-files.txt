@@ -446,6 +446,11 @@ vendor/lib64/camera.device@3.4-impl.so
 vendor/lib64/camera.device@3.5-external-impl.so
 vendor/lib64/camera.device@3.5-impl.so
 vendor/lib64/camera.device@3.6-external-impl.so
+odm/bin/hw/vendor.oplus.hardware.cammidasservice@1.0-service
+odm/etc/init/vendor.oplus.hardware.cammidasservice@1.0-service.rc
+odm/etc/vintf/manifest/manifest_oplus_cammidasservice.xml
+odm/lib/vendor.oplus.hardware.cameraextension@1.0-service-impl.so
+vendor/lib/libcamerapostproc.so
 
 # Camera - OOS
 odm/etc/camera/ancsegbase/anc_cl_kernel.cache|6d84034beebc1b9f210e6885ff8114c0a1a8ee0e
