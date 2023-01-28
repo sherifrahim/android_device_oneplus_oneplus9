@@ -13,6 +13,9 @@
 # limitations under the License.
 
 DEVICE_PATH := device/oneplus/oneplus9
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+#BOARD_KERNEL_CMDLINE += \
+#    androidboot.selinux=permissive
 
 include build/make/target/board/BoardConfigMainlineCommon.mk
 
@@ -129,6 +132,9 @@ BOARD_KERNEL_BINARIES := kernel
 BOARD_KERNEL_PAGESIZE := 4096
 KERNEL_DEFCONFIG := vendor/lahaina-qgki_defconfig
 USE_KERNEL_AOSP_LLVM := true
+#TARGET_COMPILE_WITH_MSM_KERNEL := true
+#TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_SOURCE := kernel/msm-5.4
 
 # OTA
 TARGET_OTA_ASSERT_DEVICE := OnePlus9,oneplus9
@@ -173,3 +179,5 @@ SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # Touch
 TARGET_POWER_FEATURE_EXT_LIB := //$(DEVICE_PATH):libpowerfeature_ext_oneplus9
+
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
