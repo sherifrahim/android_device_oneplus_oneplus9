@@ -13,7 +13,7 @@
 # limitations under the License.
 
 DEVICE_PATH := device/oneplus/oneplus9
-BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+#BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 #BOARD_KERNEL_CMDLINE += \
 #    androidboot.selinux=permissive
 
