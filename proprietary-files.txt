@@ -317,7 +317,7 @@ vendor/firmware/evass.b19|1ceaf73df40e531df3bfb26b4fb7cd95fb7bff1d
 vendor/firmware/evass.mbn|06987df1e67c16f530e8d79fb5897e4c3b2969ba
 vendor/firmware/evass.mdt|1b00036fbe4e874366cccb3e3def00ed44a2d991
 
-# Camera - Oplus Camera
+# Camera - OplusCamera
 my_product/lib64/libAPSClient-cmd-jni.so:system_ext/lib64/libAPSClient-cmd-jni.so
 my_product/lib64/libAPSClient-jni.so:system_ext/lib64/libAPSClient-jni.so
 my_product/lib64/libAncFilter_jni.so:system_ext/lib64/libAncFilter_jni.so
