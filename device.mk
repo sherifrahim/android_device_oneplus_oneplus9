@@ -179,6 +179,15 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.oplus.rc
 
+# Kernel
+TARGET_KERNEL_DIR ?= device/oneplus/sm8350-kernel
+LOCAL_KERNEL := $(TARGET_KERNEL_DIR)/Image
+
+PRODUCT_COPY_FILES += $(LOCAL_KERNEL):kernel
+
+# Kernel Headers
+PRODUCT_VENDOR_KERNEL_HEADERS += device/oneplus/sm8350-kernel/kernel-headers
+
 # Keymaster
 PRODUCT_VENDOR_PROPERTIES += \
     ro.crypto.dm_default_key.options_format.version=2 \

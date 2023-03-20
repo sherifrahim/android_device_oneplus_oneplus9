@@ -108,30 +108,77 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_oplus
 
 # Kernel
+#BOARD_KERNEL_CMDLINE := \
+#    androidboot.console=ttyMSM0 \
+#    androidboot.hardware=qcom \
+#    androidboot.memcg=1 \
+#    androidboot.usbcontroller=a600000.dwc3 \
+#    cgroup.memory=nokmem,nosocket \
+#    console=ttyMSM0,115200n8 \
+#    ip6table_raw.raw_before_defrag=1 \
+#    iptable_raw.raw_before_defrag=1 \
+#    loop.max_part=7 \
+#    lpm_levels.sleep_disabled=1 \
+#    msm_rtb.filter=0x237 \
+#    pcie_ports=compat \
+#    service_locator.enable=1 \
+#    swiotlb=0
+
+#BOARD_KERNEL_BASE := 0x00000000
+#BOARD_KERNEL_BINARIES := kernel
+#BOARD_KERNEL_PAGESIZE := 4096
+#KERNEL_DEFCONFIG := vendor/lahaina-qgki_defconfig
+#USE_KERNEL_AOSP_LLVM := true
+#TARGET_COMPILE_WITH_MSM_KERNEL := true
+#TARGET_KERNEL_CLANG_COMPILE := true
+#TARGET_KERNEL_SOURCE := kernel/msm-5.4
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
+#TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX := arm-linux-gnueabi-
+#KERNEL_LLVM_SUPPORT := true
+#KERNEL_CUSTOM_LLVM := true
+#TARGET_KERNEL_CLANG_VERSION := proton
+#TARGET_KERNEL_NO_GCC := true
+#BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+#BOARD_RAMDISK_USE_LZ4 := true
+#BOARD_KERNEL_IMAGE_NAME := Image
+#TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang-standalone
+
+TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_NO_KERNEL := false
+BOARD_PREBUILT_DTBIMAGE_DIR := $(TARGET_KERNEL_DIR)
+#BOARD_PREBUILT_DTBOIMAGE := /mnt/build/sherif/z/out/target/product/oneplus9pro/dtbo.img
+BOARD_BOOT_HEADER_VERSION := 3
+BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := \
-    androidboot.console=ttyMSM0 \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
     cgroup.memory=nokmem,nosocket \
-    console=ttyMSM0,115200n8 \
-    ip6table_raw.raw_before_defrag=1 \
-    iptable_raw.raw_before_defrag=1 \
     loop.max_part=7 \
     lpm_levels.sleep_disabled=1 \
     msm_rtb.filter=0x237 \
     pcie_ports=compat \
     service_locator.enable=1 \
-    swiotlb=0
-
-BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_BINARIES := kernel
+    swiotlb=0 \
+    ip6table_raw.raw_before_defrag=1 \
+    iptable_raw.raw_before_defrag=1
+BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
-KERNEL_DEFCONFIG := vendor/lahaina-qgki_defconfig
-USE_KERNEL_AOSP_LLVM := true
-#TARGET_COMPILE_WITH_MSM_KERNEL := true
-#TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_SOURCE := kernel/msm-5.4
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+BOARD_RAMDISK_USE_LZ4 := true
+
+# Kernel modules
+KERNEL_MODULE_DIR := $(TARGET_KERNEL_DIR)
+KERNEL_MODULES := $(wildcard $(KERNEL_MODULE_DIR)/*.ko)
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
+BOARD_BUILD_VENDOR_RAMDISK_IMAGE := true
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery))
+BOARD_VENDOR_KERNEL_MODULES := $(KERNEL_MODULES)
+BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(addprefix $(KERNEL_MODULE_DIR)/, $(notdir $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)))
+TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
 
 # OTA
 TARGET_OTA_ASSERT_DEVICE := OnePlus9,oneplus9
@@ -179,6 +226,6 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # Touch
-TARGET_POWER_FEATURE_EXT_LIB := //$(DEVICE_PATH):libpowerfeature_ext_oneplus9
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
