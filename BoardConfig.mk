@@ -16,7 +16,7 @@ DEVICE_PATH := device/oneplus/oneplus9
 #BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 #BOARD_KERNEL_CMDLINE += \
 #    androidboot.selinux=permissive
-#USE_KERNEL_AOSP_LLVM := true
+
 include build/make/target/board/BoardConfigMainlineCommon.mk
 
 # A/B
@@ -128,7 +128,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_BINARIES := kernel
 BOARD_KERNEL_PAGESIZE := 4096
 KERNEL_DEFCONFIG := vendor/lahaina-qgki_defconfig
-#USE_KERNEL_AOSP_LLVM := true
+USE_KERNEL_AOSP_LLVM := true
 #TARGET_COMPILE_WITH_MSM_KERNEL := true
 #TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/msm-5.4
