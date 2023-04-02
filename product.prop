@@ -6,3 +6,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.secure=0 \
     ro.adb.secure=0
 endif
+
+vendor.camera.aux.packagelist=org.lineageos.aperture,com.oneplus.camera,org.codeaurora.snapcam
+vendor.camera.aux.packagelist2=com.android.camera,com.google.android.GoogleCameraEng
+persist.camera.privapp.list=com.oneplus.camera,org.codeaurora.snapcam,com.android.camera
