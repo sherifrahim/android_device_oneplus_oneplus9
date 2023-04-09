@@ -11,3 +11,7 @@ endif
 #vendor.camera.aux.packagelist2=com.android.camera,com.google.android.GoogleCameraEng
 #persist.camera.privapp.list=com.oneplus.camera,org.codeaurora.snapcam,com.android.camera
 persist.vendor.camera.expose.aux=1
+
+# Google Lens
+ro.com.google.lens.oem_camera_package=com.oplus.camera
+ro.com.google.lens.oem_image_package=com.oneplus.gallery
