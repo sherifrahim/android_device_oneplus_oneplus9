@@ -478,6 +478,7 @@ odm/etc/camera/filters_lut/oplus_VAEROY_III.cube.rgb.bin|f41fba0fa8480f72d984630
 odm/etc/camera/filters_lut/oplus_YLLAAS.cube.rgb.bin|99ad355afbaa3192bf60c84c65f31056c9a8da9b
 odm/etc/camera/filters_lut/oplus_r4.cube.rgb.bin|414e1f7704f0dd2a05694cd7efcdfcc662849d2a
 odm/etc/camera/filters_lut/oplus_r5.cube.rgb.bin|cf0d0368854ab79566eb05786b3e1425ca22664a
+vendor/lib64/hw/com.qti.chi.override.so|007e3e2e8a67e8113cb36cf1ee3d010017e73ad5
 odm/etc/camera/filters_lut/oplus_r6.cube.rgb.bin|d81470dfa79e37532c442600aa0506ea27c57576
 odm/etc/camera/filters_lut/oplus_video_filter_black_and_white|870ab4e427fe6a91ad9108bc350915b32ef639d0
 odm/etc/camera/filters_lut/oplus_video_filter_highlight|420b1886de6e2ab5151c584f42c8e914aa4291e0
@@ -925,7 +926,6 @@ vendor/lib64/camera/components/com.qtistatic.stats.awb.so|412aa16423153857610082
 vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so|4f1b6eeeb83fdabb0e32d6bb20281b5cfee03478
 vendor/lib64/camera/components/libdepthmapwrapper_secure.so|f436f6557b55c5177a621149098f72332f74ef31
 vendor/lib64/hw/camera.qcom.so|51a1537e4e59e9fee0210a2de63cbc665b2f404d
-vendor/lib64/hw/com.qti.chi.override.so|8a35fce3e052af36ec25f1b60ac8a9acf100d7d9
 vendor/lib64/com.qti.chiusecaseselector.so|30dfbbdbab818f29e6298b0a8d4f2140264bd515
 vendor/lib64/com.qti.feature2.anchorsync.so|db546790225c6b6bae26ccbf95656ccd5d89dcb5
 vendor/lib64/com.qti.feature2.demux.so|92d114a1e4bc7b803531394cf9604648dd7e921c
