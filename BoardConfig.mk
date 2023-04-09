@@ -18,8 +18,6 @@ DEVICE_PATH := device/oneplus/oneplus9
 #    androidboot.selinux=permissive
 
 include build/make/target/board/BoardConfigMainlineCommon.mk
-TARGET_USES_OPLUS_CAMERA := true
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
 
 # A/B
 AB_OTA_UPDATER := true
